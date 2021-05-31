@@ -1,23 +1,15 @@
 package com.example.dao;
-	import java.util.ArrayList;
 
-	import java.util.List;
+import java.util.ArrayList;
 
-	import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.jdbc.core.JdbcTemplate;
-	import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Repository;
 
-	import com.example.beans.Employee;
-	import com.example.exception.CustomException;
-	import com.example.mapper.EmployeeMapper;
-	
+import com.example.beans.Employee;
 
+@Repository
+public interface EmployeeRdo extends JpaRepository<Employee, Integer> {
 
-	@Repository
-	public interface EmployeeRdo extends JpaRepository<Employee,Integer> {
-		
-		
 //	@Autowired
 //	JdbcTemplate template;
 //		//public static JdbcTemplate template = ConnectionUtil.getConnection();
@@ -85,6 +77,4 @@ import org.springframework.jdbc.core.JdbcTemplate;
 //			else
 //				return true;
 //		}
-	}
-
-
+}
